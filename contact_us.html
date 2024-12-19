@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Arrow Real Estate</title>
+    <link rel="stylesheet" href="contact_us.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Header/Navbar -->
+    <div id="header">
+        <div id="head">
+            <div id="logo">
+                <img id="logo_img" src="arrow.jpg" alt="loading..">
+                <p>ARROW<br>REALESTATE</p>
+            </div>
+            <div id="info_links">
+                <a href="home.html"><h5>Home</h5></a>
+                <a href="abt.html"><h5>About us</h5></a>
+                <a href="contact_us.html"><h5>Contact us</h5></a>
+                <a href="reg.html"><h5>Register</h5></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you have any questions, feel free to reach out to us using the form below or at the contact details provided.</p>
+                <h4>Email:</h4>
+                <p>info@arrowrealestate.com</p>
+                <h4>Phone:</h4>
+                <p>(123) 456-7890</p>
+                <h4>Address:</h4>
+                <p>123 Real Estate St, City, State, ZIP</p>
+            </div>
+            <div class="contact-form">
+                <form id="frm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="msg" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map">
+            <h3>Our Location</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345097556!2d144.95373531531626!3d-37.81627997975196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0c24f341%3A0xb75f8d2e3c9d3700!2s123%20Real%20Estate%20St%2C%20Melbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1669196748764!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="Footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your reliable partner in real estate.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Social media links here.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>info@arrowrealestate.com</p>
+                <p>(123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Arrow Real Estate. All rights reserved.
+        </div>
+    </div>
+    <script>
+        document.getElementById("frm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var frm = document.getElementById("frm");
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var msg = document.getElementById("msg").value.trim();
+    
+            // Regular expressions
+            var nameP = /^[a-zA-Z\s]+$/;  // Allows only letters and spaces for name
+            var emailP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;  // Standard email pattern
+           
+    
+            // Validation functions
+            function nameCheck(name) {
+                if (!name.match(nameP)) {
+                    alert("Please enter a valid Name (letters only).");
+                    return false;
+                }
+                return true;
+            }
+    
+            function emailCheck(email) {
+                if (!email.match(emailP)) {
+                    alert("Please enter a valid Email.");
+                    return false;
+                }
+                return true;
+            }
+            function msgCheck(msg) {
+                if (!msg.match(nameP)) {
+                    alert("Please fill the Message.");
+                    return false;
+                }
+                return true;
+            }
+           
+    
+            // Sequential validation checks
+            if (nameCheck(name) && emailCheck(email) && msgCheck(msg)) {
+                alert("Form submitted successfully!");
+                frm.reset();
+            } 
+        });
+    </script>
+    
+
+</body>
+</html>

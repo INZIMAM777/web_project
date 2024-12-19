@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buy.css">
+    <title>Buy Form</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="buy.js"></script> <!-- Link to the JS validation file -->
+</head>
+<body>
+    <!-- Hidden Form for Buying Details -->
+    <div >
+        <form id="buy-form" action="submit.php" method="post" onsubmit="return validateForm()">
+            <h1 id="detail" align="center">Enquiry</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+            
+            <label for="day">Day:</label>
+            <select name="select" id="day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thrusday">Thrusday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select><br><br>
+            
+            <label for="time">Time:</label>
+            <input type="datetime-local" id="time" align="center" name="time" required><br><br>
+            
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" required><br><br>
+            
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

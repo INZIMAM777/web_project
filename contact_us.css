@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text color */
+}
+
+/* Header/Navbar Styles */
+#header {
+    background: rgba(0, 0, 0, 0.9); /* Header background color */
+    padding: 20px 0;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the header */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#logo_img {
+    width: 50px; /* Logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo image and text */
+}
+
+#info_links {
+    display: flex;
+    align-items: center;
+}
+
+#info_links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Space between links */
+}
+
+#info_links h5 {
+    margin: 0;
+}
+
+#logout {
+    background-color:  #ff4b5c; /* Logout button background */
+    color: #ffffff; /* Logout button text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px; /* Top padding to avoid overlap with header */
+    background-color: #f9f9f9; /* Light gray background for contact section */
+    margin-top: 60px; /* To avoid overlap with header */
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px; /* Maximum width for large screens */
+    margin-bottom: 40px; /* Space before the map */
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px; /* Space between info and form */
+}
+
+.contact-info h3 {
+    color: #ff4b5c; /* Accent color */
+}
+
+.contact-info h4 {
+    margin: 10px 0;
+    color: #555; /* Optional color for subheadings */
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Added color for labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #ff2e3b; /* Darker shade on hover */
+}
+
+/* Google Map Styles */
+.map {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center the map */
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Footer Styles */
+#Footer {
+    background-color: #2b2b2b; /* Footer background */
+    color: white; 
+    padding: 20px 0;
+    margin-top: 40px; /* Space above footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px; /* Space between sections */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem; /* Slightly smaller text */
+}

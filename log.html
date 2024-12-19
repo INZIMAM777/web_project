@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="header">
+        <div id="head">
+            <div id="logo">
+                <img id="logo_img" src="arrow.jpg" alt="loading...">
+                <p>ARROW<br>REALESTATE</p>
+            </div>
+            <div id="info_links">
+                <a href="home.html" target="_self"><h5>Home</h5></a>
+                <a href="abt.html"><h5>About us</h5></a>
+                <a href="contact_us.html"><h5>Contact us</h5></a>
+                <a href="reg.html"><h5>Register</h5></a>
+            </div>
+        </div>
+    </div>
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login to Your Account</h2>
+            <form id="frm" action="/web_project/log.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="pwd" required>
+                <button type="submit" id="sub">Login</button>
+            </form>
+            
+            <p class="register-link">Don't have an account? <a href="reg.html">Register here</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("frm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var frm = document.getElementById("frm");
+            var eml = document.getElementById("email").value.trim();
+            var pwd = document.getElementById("password").value.trim();
+            var eml_pt = /^[0-9a-z._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            var pwd_pt = /^[a-zA-Z0-9._@%+-]{6,20}$/;
+
+            function eml_vld(eml, eml_pt) {
+                if (!eml.match(eml_pt)) {
+                    alert("Please enter a valid Email ID.");
+                    return false;
+                }
+                return true;
+            }
+
+            function pwd_vld(pwd, pwd_pt) {
+                if (!pwd.match(pwd_pt)) {
+                    alert("Please enter a valid Password(must be 6 to 20 char).");
+                    return false;
+                }
+                return true;
+            }
+
+            if (eml_vld(eml, eml_pt) && pwd_vld(pwd, pwd_pt)) {
+                alert("Successfully Submitted.");
+                frm.submit(); // Only submit if both validations pass
+                frm.reset();
+                
+            }
+        });
+    </script>
+</body>
+</html>

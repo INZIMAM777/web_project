@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav a, #logout {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding-left: 20px;
+}
+
+#logout {
+    background-color: #ff2323;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+p, li {
+    color: #000000;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}

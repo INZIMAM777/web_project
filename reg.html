@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="header">
+        <div id="head">
+            <div id="logo">
+                <img id="logo_img" src="arrow.jpg" alt="loading...">
+                <p>ARROW<br>REALESTATE</p>
+            </div>
+            <div id="info_links">
+                <a href="home.html"><h5>Home</h5></a>
+                <a href="abt.html"><h5>About Us</h5></a>
+                <a href="contact_us.html"><h5>Contact Us</h5></a>
+                <a href="log.html"><h5>Login</h5></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Registration Form Section -->
+    <div class="register-container">
+        <div class="register-form">
+            <h2>Create Your Account</h2>
+            <form action="http://localhost/web_project/reg.php" id="frm" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="pwd" name="pwd" required>
+                
+                <label for="c_password">Confirm Password:</label>
+                <input type="password" id="c_pwd" name="c_pwd" required>
+                
+                <label for="role">Role:</label>
+                <select name="role" id="role" required>
+                    <option value="Buyer">Buyer</option>
+                </select>
+                
+                <button type="submit">Register</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="log.html">Login here</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("frm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var frm = document.getElementById("frm");
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var pwd = document.getElementById("pwd").value.trim();
+            var c_pwd = document.getElementById("c_pwd").value.trim();
+            var role = document.getElementById("role").value;
+    
+            // Regular expressions
+            var nameP = /^[a-zA-Z\s]+$/;  // Allows only letters and spaces for name
+            var emailP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;  // Standard email pattern
+            var pwdP = /^[a-zA-Z0-9._-]{6,10}$/;  // Allows letters, digits, and certain special characters (6-10 characters)
+    
+            // Validation functions
+            function nameCheck(name) {
+                if (!name.match(nameP)) {
+                    alert("Please enter a valid Name (letters only).");
+                    return false;
+                }
+                return true;
+            }
+    
+            function emailCheck(email) {
+                if (!email.match(emailP)) {
+                    alert("Please enter a valid Email.");
+                    return false;
+                }
+                return true;
+            }
+    
+            function pwdCheck(pwd) {
+                if (!pwd.match(pwdP)) {
+                    alert("Please enter a valid Password (6 to 10 characters).");
+                    return false;
+                }
+                return true;
+            }
+    
+            function c_pwdCheck(c_pwd, pwd) {
+                if (c_pwd !== pwd) {
+                    alert("Passwords do not match. Please confirm your password.");
+                    return false;
+                }
+                return true;
+            }
+    
+            // Sequential validation checks
+            if (nameCheck(name) && emailCheck(email) && pwdCheck(pwd) && c_pwdCheck(c_pwd, pwd)) {
+                alert("Form submitted successfully!");
+                frm.submit();
+                frm.reset();
+            } 
+        });
+    </script>
+    
+</body>
+</html>
