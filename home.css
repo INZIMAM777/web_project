@@ -506,7 +506,9 @@ a {
 }
 
 @media (max-width: 768px) {
-    #achievements, #testimonials {
+
+    #achievements,
+    #testimonials {
         padding: 40px 20px;
     }
 
