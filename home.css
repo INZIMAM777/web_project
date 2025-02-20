@@ -654,7 +654,7 @@ a {
 
 /* css for Header using Media */
 
-@media(max-width:800px) {
+@media(max-width:810px) {
     #head {
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
@@ -669,6 +669,9 @@ a {
 
     #info_links {
         flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 10px;
     }
     #products {
         display: grid;
