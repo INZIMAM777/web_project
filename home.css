@@ -646,7 +646,7 @@ a {
         height: 25%;
         width: 35%;
         border: 2px solid black;
-        font-size: .7rem;
+        font-size: .8rem;
         font-weight: 650;
     }
 }
@@ -684,7 +684,7 @@ a {
 
 @media(max-width:410px) {
     #info_links h5 {
-        font-size: 9px;
+        font-size: 9.5px;
     }
 
     #logout {
