@@ -632,13 +632,16 @@ a {
         text-align: center;
         margin: 20px 0;
     }
+
     #H_hmain {
         font-weight: 800;
         font-size: 2.15rem;
     }
+
     #P_hmain {
         font-size: 1rem;
     }
+
     .vrtys {
         height: 25%;
         width: 35%;
@@ -667,6 +670,10 @@ a {
     #info_links {
         flex-direction: column;
     }
+    #products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 @media(max-width:550px) {
@@ -689,12 +696,36 @@ a {
         justify-content: space-evenly;
         padding: 10px;
     }
+
     #H_hmain {
         font-weight: 800;
         font-size: 1.55rem;
     }
+
     #P_hmain {
         font-size: .8rem;
+    }
+
+    #products {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .p_info {
+        font-size: 1rem;
+    }
+
+    .p_loc {
+
+        font-size: .6rem;
+    }
+    .price {
+        font-size: .8rem;
+    }
+    .p_more {
+        padding: 5px;
+        width: 50%;
+        font-size: .6rem;
+        
     }
 }
 
@@ -706,13 +737,16 @@ a {
     #info1 {
         width: 110%
     }
+
     #H_hmain {
         font-weight: 800;
         font-size: 1rem;
     }
+
     #P_hmain {
         font-size: .6rem;
     }
+
     .vrtys {
         height: 20%;
         width: 30%;
@@ -721,4 +755,3 @@ a {
         font-weight: 650;
     }
 }
-
